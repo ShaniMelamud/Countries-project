@@ -1,0 +1,28 @@
+
+<img *ngIf="!countries" src="/assets/images/loading.gif">
+
+<app-sub-header *ngIf="countries">There are {{countries.length}} countries on the table:</app-sub-header>
+
+<input (input)="search()" class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search by name">
+
+<div *ngIf="countries">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Native name</th>
+            <th>Capital city</th>
+            <th>Population</th>
+            <th>Flag</th>
+        </tr>
+        <tr *ngFor="let c of countries">
+            <td>{{c.name}}</td>
+            <td>{{c.nativeName}}</td>
+            <td>{{c.capital}}</td>
+            <td>{{c.population | number}}</td>
+            <td>
+                <app-thumbnail imageSource="{{c.flag}}" imageWidth="80" imageHeight="50"></app-thumbnail>
+            </td>            
+        </tr>
+    </table>
+</div>
+

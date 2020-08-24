@@ -1,0 +1,41 @@
+table{
+    margin: auto;
+
+}
+
+table, th, td{
+    border:  1px solid blue;
+}
+
+td, th{
+    padding: 5px;
+    width: 200px;
+}
+
+tr:nth-of-type(even){
+    background-color: lightyellow;
+}
+
+tr:nth-of-type(odd){
+    background-color: lightblue;
+}
+
+tr:first-of-type{
+    background-color: lightseagreen;
+}
+
+div{
+   height: 75%;
+   overflow: auto;
+   display: inline-block;
+}
+
+.form-control {
+    margin: 20px;
+    left: 50px;
+    top: 130px;
+    position: fixed;
+
+
+}
+
